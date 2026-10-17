@@ -1,5 +1,7 @@
 # DEVİR — İş yarıda kalmasın
 
+[Canlı demo](https://devir-six.vercel.app) · [Test sonuçları](https://github.com/Saylool/devir/actions/workflows/ci.yml) · [MIT lisansı](LICENSE)
+
 **Yarım kalan bir finansal agent görevini, tamamlanan işi yeniden yapmadan başka bir agente devret.**
 
 DEVİR; gerçekleşen işlemleri uzlaştırır, kalan bütçeyi hesaplar, yeni yürütücü tekliflerini bütçe / süre / fiyat sınırlarından geçirir ve eski agentin yetkisini bir `epoch` değişimiyle geçersiz kılar.
