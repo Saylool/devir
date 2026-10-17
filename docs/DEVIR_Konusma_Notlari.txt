@@ -1,0 +1,21 @@
+DEVİR — 2 DAKİKALIK KONUŞMA NOTLARI
+
+SLAYT 1 / 00:00–00:15
+Merhaba, projemizin adı DEVİR. Bir ajan görevin ortasında durduğunda, tamamlanan işi, kalan bütçeyi ve yetki sınırlarını başka bir ajana aktarıyoruz. Hedefimiz, kesinti sonrasında işi baştan başlatmadan devam ettirmek.
+
+SLAYT 2 / 00:15–00:35
+Örneğimizde beş yüz USDT bütçeli bir AVAX alımı var. Atlas yüzde otuz beşte bağlantısını kaybediyor. Fakat son emrin yanıtı kaybolmuş olabilir. DEVİR kayıtları uzlaştırıyor ve elli USDT daha gerçekleştiğini buluyor. Korunan ilerleme yüzde kırk beş, kalan bütçe iki yüz yetmiş beş USDT oluyor.
+
+SLAYT 3 / 00:35–01:00
+Devir dört adımda ilerliyor. Önce gerçekleşen işi buluyoruz. Sonra eski emrin kalanını simülasyonda kapatıyoruz. Yeni yürütücünün teklifini fiyat, süre ve hizmet bütçesine göre seçiyoruz. Son adımda yetki sürümünü artırıyoruz. Böylece eski ajan önceki yetkiyle işlem yapamıyor, yeni ajan yalnızca kalan işi devralıyor.
+
+SLAYT 4 / 01:00–01:25
+OKX Agent Trade Kit, AVAX fiyatı ve emir defteri verisini sağlıyor. Canlı veri gelmezse, sistem tarihli kayıt kullandığını gösteriyor. Avalanche tarafında Fuji test ağına hizmet emaneti sözleşmemizi dağıttık. Fonlama, devir ve tamamlama işlevleri sözleşmede var. Ancak bu üç işlemin tamamını zincirde uçtan uca henüz doğrulamadık.
+
+SLAYT 5 / 01:25–01:45
+Çalışan demoda Nova kalan işi tamamlıyor. Alım toplamı beş yüz USDT, hizmet bedeli iki virgül kırk üç USDT oluyor. Devir makbuzu ve işlem geçmişi saklanıyor. Şu an emirler ve sağlayıcı teklifleri simülasyon, karar motoru kural tabanlı. Canlı LLM henüz etkin değil.
+
+SLAYT 6 / 01:45–02:00
+DEVİR’in değeri, kesintiden sonra bütçeyi ve tamamlanan işi koruyarak devam edebilmek. Açık kaynak prototipimiz yayında. Sonraki adımlarımız canlı LLM bağlantısını etkinleştirmek ve Fuji’de görevin tüm yaşam döngüsünü doğrulamak. Teşekkürler.
+
+Süre: normal tempoda yaklaşık 2 dakika. Zaman kodlarını okuma.
