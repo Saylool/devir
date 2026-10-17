@@ -8,15 +8,17 @@ DEVİR; gerçekleşen işlemleri uzlaştırır, kalan bütçeyi hesaplar, yeni y
 
 ## 90 saniyelik demo
 
-1. **Yeni görev** ile varsayılan 500 USDT AVAX alım görevini başlat.
-2. **Kesinti oluştur → Yanıt kayboldu** senaryosunu seç.
-3. **Devir planını oluştur**: İlk agentin görünen %35 ilerlemesine ek olarak, yanıtı kaybolmuş %10 gerçekleşme bulunur. Korunan ilerleme %45 olur.
-4. Teklifleri incele ve **Devri onayla**. Yeni agent yalnızca kalan 275 USDT kısmını üstlenir; eski agentin epoch'u geçersiz olur.
-5. **Kalan işi tamamla**. İşlem toplamı 500 USDT'yi, hizmet bedeli 3 USDT sınırını aşmaz. Checkpoint ve işlem izini indir.
+1. **Kesinti senaryosu → Kaybolan yanıt** seçeneğini seç ve **Demoyu başlat**. Varsayılan alım bütçesi 500 USDT'dir.
+2. **Atlas’ın bağlantısını kes** düğmesine bas.
+3. **Kalan işi kurtar**: İlk agentin görünen %35 ilerlemesine ek olarak, yanıtı kaybolmuş %10 gerçekleşme bulunur. Korunan ilerleme %45 olur.
+4. Teklifleri incele ve **Nova agent’ına devret**. Yeni agent yalnızca kalan 275 USDT kısmını üstlenir; eski agentin epoch'u geçersiz olur.
+5. **Kalan işi tamamla**. İşlem toplamı 500 USDT'yi, hizmet bedeli 3 USDT sınırını aşmaz. **Tüm kayıtları ve kanıtı aç** bölümünden checkpoint ve işlem izini indir.
 
 **Çalışan özellikler:** görev durum makinesi, uzlaştırma, bütçe ve fiyat kontrolleri, teklif seçimi, NDJSON araç izi, checkpoint hash'i, kalıcı görev kaydı, cüzdan ile Fuji sözleşme etkileşimi.
 
 **Demo sınırları:** Alım emirleri ve agent sağlayıcıları yerel simülasyondur; gerçek OKX hesaplarından alım/satım yapılmaz. Varsayılan karar motoru kurallıdır. Tool-calling LLM adaptörü uygulanmıştır; ayrı API yapılandırması olmadan etkin değildir. Piyasa canlı okunamazsa tarihi açıkça gösterilen ATK kaydına dönülür.
+
+![DEVİR canlı demo](docs/devir-vercel.png)
 
 ## Avalanche Fuji
 
