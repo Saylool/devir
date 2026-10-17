@@ -1,7 +1,7 @@
 import { createHash, randomUUID } from 'node:crypto';
 import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
+import { get, head, put, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 import { HttpError } from '../errors';
 
 export type Document = { value: string; etag: string };
@@ -19,10 +19,24 @@ function safeKey(key: string) {
 
 export class BlobDocumentStore implements DocumentStore {
   async read(key: string): Promise<Document | null> {
-    const result = await get(safeKey(key), { access: 'private', useCache: false });
+    const pathname = safeKey(key);
+    // Read the storage ETag BEFORE the consistent content download. Download
+    // response ETags can describe a compressed HTTP representation instead.
+    // If another writer changes the object between these reads, the older
+    // metadata ETag makes the eventual CAS fail safely, never overwrite it.
+    let metadata;
+    try { metadata = await head(pathname); }
+    catch (error) {
+      if (error instanceof BlobNotFoundError) return null;
+      throw error;
+    }
+    const result = await get(pathname, {
+      access: 'private', useCache: false,
+      headers: { 'Accept-Encoding': 'identity' },
+    });
     if (!result) return null;
-    if (result.statusCode !== 200 || !result.stream) throw new Error('Unexpected storage response');
-    return { value: await new Response(result.stream).text(), etag: result.blob.etag };
+    if (result.statusCode !== 200 || !result.stream || !metadata.etag) throw new Error('Unexpected storage response');
+    return { value: await new Response(result.stream).text(), etag: metadata.etag };
   }
 
   async write(key: string, value: string, expected: string | null) {
