@@ -1,0 +1,9 @@
+{
+  "network": "Avalanche Fuji C-Chain",
+  "chainId": 43113,
+  "address": "0x37823aa03c00bf91b461fAB176139C722952d0b0",
+  "transactionHash": "0x4c219c50a3b2ecbbd55f8a0ba369bf42b2cf5f4c5e7cbd1611947a765b35ae1b",
+  "blockNumber": 59602420,
+  "deployedAt": "2026-10-17T14:02:34.047Z",
+  "explorer": "https://explorer-test.avax.network/c-chain/tx/0x4c219c50a3b2ecbbd55f8a0ba369bf42b2cf5f4c5e7cbd1611947a765b35ae1b"
+}
